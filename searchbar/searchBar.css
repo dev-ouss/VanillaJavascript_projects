@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+  background: #6e0b14;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+img {
+  max-width: 100%;
+}
+.character__img {
+  width: 18%;
+}
+.title {
+  margin-bottom: 40px;
+  text-align: center;
+  color: #ffff;
+  font-size: 24px;
+}
+.title h1 span {
+  font-size: 22px;
+}
+.searchbar {
+  position: relative;
+}
+.searchbar input {
+  border: none;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+}
+
+.searchbar::after {
+  content: "🔍";
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+.characters__container {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 800px));
+  gap: 20px;
+}
+.character {
+  background: #ffff;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.character h2 {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.character p {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 750px) {
+  .characters__container {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(220px, 500px));
+    gap: 20px;
+  }
+}

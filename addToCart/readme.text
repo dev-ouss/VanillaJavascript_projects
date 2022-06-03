@@ -1,0 +1,11 @@
+<tr class="cart__product">
+          <td class="cart_img">
+            <img src="./Images/watch__2.jpg" alt="" />
+            <p>Rolex</p>
+          </td>
+          <td><p>$12</p></td>
+          <td>
+            <input type="number" name="quantity" id="quantity" />
+            <button class="remove__btn">REMOVE</button>
+          </td>
+        </tr>

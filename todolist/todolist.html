@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="todolist.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f240999934.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Todo List</title>
+  </head>
+  <body>
+    <section>
+      <div class="title">
+        <h1>Oussama's Todo List</h1>
+      </div>
+      <div class="wrapper">
+        <div class="first-section">
+          <form autocomplete="off">
+            <input type="text" id="task-input" />
+          </form>
+
+          <div class="dropdown">
+            <button class="dropdown-btn">
+              <p class="dropdown-btn-text">All</p>
+              <span class="arrow"><i class="fas fa-caret-down"></i></span>
+            </button>
+            <div class="dropdown-content">
+              <p id="all">All</p>
+              <p id="completed">Completed</p>
+              <p id="uncompleted">Uncompleted</p>
+            </div>
+          </div>
+        </div>
+        <div class="second-section"></div>
+      </div>
+    </section>
+    <script src="todolist.js"></script>
+  </body>
+</html>

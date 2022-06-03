@@ -1,0 +1,135 @@
+:root {
+  --primary-color-1: #19547b;
+  --primary-color-2: #ffd89b;
+  --primary-ff: Heebo;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: -webkit-linear-gradient(to left, #19547b, #ffd89b);
+  background: linear-gradient(to left, #19547b, #ffd89b);
+  overflow: hidden;
+}
+section {
+  height: auto;
+  font-family: Heebo;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  align-items: center;
+}
+.title h1 {
+  color: #ffff;
+  font-size: 45px;
+  padding: 20px;
+}
+.wrapper .first-section {
+  display: flex;
+  position: relative;
+}
+.wrapper .first-section input {
+  height: 50px;
+  width: 420px;
+  border: none;
+  margin: 0 20px;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+.wrapper .first-section .dropdown-btn {
+  width: 155px;
+  height: 50px;
+  cursor: pointer;
+  text-align: left;
+  border: none;
+  padding: 10px;
+  position: relative;
+  background: #ffff;
+  color: var(--primary-color-1);
+  font-family: Heebo;
+  font-size: 14px;
+}
+.dropdown-btn span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--primary-color-1);
+  height: 100%;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+  font-size: 28px;
+}
+.dropdown .dropdown-content {
+  background: #ffff;
+  color: var(--primary-color-1);
+  display: none;
+}
+/* show dropdown  */
+.dropdown .show {
+  display: block;
+}
+.dropdown .dropdown-content p {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+.dropdown .dropdown-content p:hover {
+  background: var(--primary-color-2);
+  cursor: pointer;
+}
+
+.second-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+.new-task {
+  background: #ffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 580px;
+  height: 50px;
+  font-size: 18px;
+  padding-left: 20px;
+  margin: 7px 0 7px 20px;
+  transition: all 0.3s;
+}
+
+/* delete transition */
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.buttons button {
+  border: none;
+  color: #ffff;
+  font-size: 18px;
+  margin: 0;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+.buttons #done {
+  background: var(--primary-color-1);
+}
+.buttons #delete {
+  background: rgb(255, 115, 0);
+}
+
+/* done tasks  */
+.second-section .done-task {
+  opacity: 0.5;
+  text-decoration: line-through;
+  transition: all 0.2s;
+}
+
+.second-section i {
+  pointer-events: none;
+}

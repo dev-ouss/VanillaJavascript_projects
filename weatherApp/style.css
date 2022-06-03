@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+section {
+  height: 100vh;
+  background: linear-gradient(
+    320deg,
+    rgba(0, 5, 255, 1) 0%,
+    rgba(10, 213, 233, 1) 100%
+  );
+  position: relative;
+}
+
+.wrapper {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+.wrapper h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+  margin: 15px 0;
+}
+input:focus {
+  outline: none;
+}
+.searchbar #city {
+  height: 50px;
+  width: 300px;
+  border: none;
+  border-radius: 26px;
+  font-size: 22px;
+  padding: 0 20px;
+}
+
+.temperature {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 0 20px;
+  font-size: 22px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.icon {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+}

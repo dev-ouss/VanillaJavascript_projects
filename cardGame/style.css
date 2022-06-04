@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(148, 227, 241);
+  background: linear-gradient(
+    90deg,
+    rgba(148, 227, 241, 1) 0%,
+    rgba(105, 166, 238, 1) 100%
+  );
+  font-family: Roboto;
+}
+
+img {
+  max-width: 100%;
+}
+section {
+  max-width: 90%;
+  margin: 50px auto;
+}
+.title {
+  color: #fff;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.grid__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+.card {
+  width: 200px;
+  height: 149px;
+  cursor: pointer;
+}
+.card .front,
+.card .back {
+  perspective: 600px;
+  position: absolute;
+  width: 200px;
+  height: 149px;
+  transition: all 0.2s ease;
+  backface-visibility: hidden;
+  box-shadow: 2px 4px 5px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 4px 5px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 4px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card .front {
+  background: #fff;
+  transform: rotateY(0deg);
+}
+.card .back {
+  transform: rotateY(180deg);
+}
+/* flipping cards  */
+.flip-front {
+  transform: rotateY(180deg);
+}
+.flip-back {
+  transform: rotateY(0deg);
+}

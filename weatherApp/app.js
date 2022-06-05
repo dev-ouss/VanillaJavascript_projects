@@ -10,12 +10,16 @@ form.addEventListener("submit", display);
 
 async function fetchTemp() {
   let city = input.value;
-  let response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=428ec4625357a5f4c55c7daf00da85e0`
-  ).then((res) => res.json());
-  let temperature = response.main.temp;
-  let description = response.weather[0].main;
-  return [temperature, description];
+  try {
+    let response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=428ec4625357a5f4c55c7daf00da85e0`
+    ).then((res) => res.json());
+    let temperature = response.main.temp;
+    let description = response.weather[0].main;
+    return [temperature, description];
+  } catch (err) {
+    console.log("Error occured", err);
+  }
 }
 
 async function display(e) {

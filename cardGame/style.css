@@ -25,7 +25,10 @@ section {
   margin-bottom: 50px;
   text-align: center;
 }
-
+.title h2 {
+  font-size: 12px;
+  margin: 5px 0;
+}
 .grid__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -58,9 +61,33 @@ section {
   transform: rotateY(180deg);
 }
 /* flipping cards  */
-.flip-front {
+.card .flip-front {
   transform: rotateY(180deg);
 }
-.flip-back {
+.card .flip-back {
   transform: rotateY(0deg);
+}
+
+/* Play Again button styles  */
+
+.play__again {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgba(105, 166, 238, 1);
+  background: black;
+  padding: 5px 20px;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 1500px) {
+  .card {
+    width: 300px;
+    height: 225px;
+  }
+  .card .front,
+  .card .back {
+    width: 300px;
+    height: 225px;
+  }
 }

@@ -1,4 +1,4 @@
-import { Kelvin } from "../temperatureConverter/temperatureConverter/app.js";
+import { Kelvin } from "../temperatureConverter/app.js";
 
 const tempDiv = document.querySelector(".temperature");
 const form = document.querySelector(".searchbar");
@@ -49,7 +49,7 @@ async function display(e) {
     default:
       currentIcon = "CLEAR_DAY";
   }
-  console.log(currentIcon);
+
   setIcon(currentIcon, document.querySelector(".icon"));
 }
 

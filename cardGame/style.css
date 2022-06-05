@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --main-clr: rgba(105, 166, 238, 1);
+}
 body {
   background: rgb(148, 227, 241);
   background: linear-gradient(
@@ -19,6 +22,7 @@ img {
 section {
   max-width: 90%;
   margin: 50px auto;
+  position: relative;
 }
 .title {
   color: #fff;
@@ -74,10 +78,61 @@ section {
   border: none;
   cursor: pointer;
   font-weight: bold;
-  color: rgba(105, 166, 238, 1);
+  color: var(--main-clr);
   background: black;
   padding: 5px 20px;
   border-radius: 4px;
+}
+
+/* dark mode  */
+.dark__mode {
+  background: black;
+}
+.checkbox {
+  position: absolute;
+  top: -5%;
+  right: 0;
+}
+#dark {
+  display: none;
+}
+.dark {
+  width: 80px;
+  height: 40px;
+  background: #fff;
+  display: inline-block;
+  border-radius: 22px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+}
+.dark::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: var(--main-clr);
+  background-image: url("./images/sun.svg");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #fff;
+  position: absolute;
+  top: -1.5px;
+  left: 0;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  line-height: 0;
+  transition: all 0.6s ease;
+}
+#dark:checked + .dark::after {
+  content: "";
+  background: rgb(180, 9, 9);
+  background-image: url("./images/night-mode.png");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateX(50px) rotate(360deg);
 }
 
 @media screen and (min-width: 1500px) {

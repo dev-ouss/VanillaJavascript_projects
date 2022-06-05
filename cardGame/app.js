@@ -1,12 +1,14 @@
+const body = document.querySelector("body");
 const cards = document.querySelectorAll(".card");
 const livesTxt = document.querySelector(".lives");
 const titleDiv = document.querySelector(".title");
+const dark = document.querySelector("#dark");
 let flipped = [];
 let lives = Number(livesTxt.textContent);
 let counter = 0;
 
 // add event listener
-
+dark.addEventListener("change", darkMode);
 cards.forEach((card) => {
   card.addEventListener("click", isSimilar);
 });
@@ -84,4 +86,8 @@ function reloadDoc(e) {
   if (target.className == "play__again") {
     location.reload();
   }
+}
+
+function darkMode() {
+  body.classList.toggle("dark__mode");
 }

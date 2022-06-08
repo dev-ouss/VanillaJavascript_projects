@@ -90,7 +90,7 @@ section {
 }
 .checkbox {
   position: absolute;
-  top: -5%;
+  top: -35px;
   right: 0;
 }
 #dark {
